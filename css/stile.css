@@ -218,6 +218,36 @@ button:hover {
     justify-content: center;
 }
 
+/* Stile per il tasto "Invia" */
+.btn-invia {
+    background-color: #f09b9b; /* Colore di sfondo rosa chiaro */
+    color: white; /* Colore del testo */
+    padding: 5px 10px; /* Ridotto padding per rendere il pulsante più compatto */
+    border: none; /* Rimuove il bordo */
+    border-radius: 8px; /* Angoli arrotondati */
+    font-size: 16px; /* Dimensione del testo */
+    font-weight: bold; /* Grassetto */
+    cursor: pointer; /* Cursore a mano per indicare che è cliccabile */
+    transition: background-color 0.3s ease; /* Effetto di transizione */
+    display: inline-block; /* Il pulsante si adatta al testo */
+    width: auto; /* Impedisce che il pulsante si espanda troppo */
+    white-space: nowrap; /* Evita che il testo vada a capo */
+}
+
+.btn-invia:hover {
+    background-color: #e77474; /* Colore di sfondo più scuro al passaggio del mouse */
+}
+
+
+/* Padding per schermi più piccoli */
+@media (max-width: 767px) {
+    .col-md-9 {
+        padding-left: 20px !important; /* Aggiungi più padding per schermi piccoli */
+        padding-right: 20px !important;
+    }
+}
+
+
 
 
 
