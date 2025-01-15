@@ -1,0 +1,227 @@
+.text-pink {
+    color: rgb(234, 190, 190);
+}
+
+/* Stile per il carosello */
+#carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 500px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+
+#carousel-container {
+    position: relative;
+    width: 90%;
+    height: 100%;
+}
+
+.carousel-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    border-radius: 10px;
+}
+
+.carousel-image.active {
+    opacity: 1;
+}
+
+.carousel-prev {
+    left: 10px;
+}
+
+.carousel-next {
+    right: 10px;
+}
+
+.carousel-prev:hover, .carousel-next:hover {
+    background-color: rgba(245, 186, 186, 0.8);
+}
+
+/* Nascondi la tabella inizialmente */
+.tabella-nascosta {
+    display: none;
+}
+
+/* Stile per il bottone di attivazione */
+button {
+    padding: 0px;
+    background-color: rgba(245, 186, 186, 0.8);
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+button:hover {
+    background-color: rgba(245, 186, 186, 0.8);
+}
+
+/* Centrare il logo e posizionare il menu hamburger sotto su schermi piccoli */
+@media (max-width: 767px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar-brand {
+        flex: 0 0 auto;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .navbar-brand img {
+        max-width: 50%;
+        max-height: 120px;
+        height: auto;
+        width: auto;
+    }
+
+    .navbar-toggler {
+        flex: 0 0 auto;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .navbar-collapse {
+        text-align: center;
+    }
+}
+
+/* Stile normale per schermi grandi */
+.navbar-brand img {
+    max-width: 100%;
+    max-height: 150px;
+    height: auto;
+}
+
+.timeline-container {
+    position: relative;
+    width: 90%;
+    margin: 50px auto;
+    padding: 20px 0;
+}
+
+.timeline-line {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background-color: dimgray;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+/* Stile degli eventi */
+.timeline-item {
+    position: relative;
+    width: 50%;
+    padding: 10px 20px;
+    box-sizing: border-box;
+}
+
+.timeline-item.left {
+    left: 0;
+    text-align: right;
+}
+
+.timeline-item.right {
+    left: 50%;
+    text-align: left;
+}
+
+.timeline-content {
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 2;
+    word-wrap: break-word;
+}
+
+/* Freccia verso la linea */
+.timeline-content::before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    border: 10px solid transparent;
+    z-index: 1;
+}
+
+.timeline-item.left .timeline-content::before {
+    right: -20px;
+    border-left: 10px solid white;
+}
+
+.timeline-item.right .timeline-content::before {
+    left: -20px;
+    border-right: 10px solid white;
+}
+
+/* Posizione dei punti */
+.timeline-item::after {
+    content: "";
+    top: 20px;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    background-color: rgb(240, 190, 190);
+    border: 5px solid white;
+    border-radius: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+/* Layout responsivo */
+@media (max-width: 768px) {
+    .timeline-item {
+        width: 100%;
+        text-align: center;
+    }
+
+    .timeline-item.left,
+    .timeline-item.right {
+        left: 0;
+    }
+
+    .timeline-content::before {
+        display: none;
+    }
+
+    .timeline-item::after {
+        left: 50%;
+    }
+}
+
+/* Centra il testo del footer su schermi grandi e piccoli */
+.conteiner .text-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Assicura che la riga del footer sia centrata anche su dispositivi mobili */
+.conteiner .row {
+    justify-content: center;
+}
+
+
+
+
+
+
+
+
